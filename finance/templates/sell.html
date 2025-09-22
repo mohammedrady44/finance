@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block title %}Sell{% endblock %}
+
+{% block body %}
+<form action="/sell" method="post">
+    <div class="form-container-item input-container">
+    <select name = "symbol" class="form-select" aria-label="Default select example">
+        {% for symbol in symbols %}
+            <option>{{symbol[1]}}</option>
+        {% endfor %}    
+    </select>
+    {% if value.get('symbol') %}
+        <div class = "er">{{value['symbol']}}</div>
+    {% endif %}  
+    </div>
+    <div class="form-container-item input-container">
+    <input type="text" class="form-control" autocomplete="off" name = "shares" placeholder="shares">
+    {% if value.get('shares') %}
+        <div class = "er">{{value['shares']}}</div>
+    {% endif %}  
+    </div>
+    <div class="form-container-item">
+    <button class ="btn btn-primary">Sell</button>
+    </div>
+    
+</form>
+{% endblock %}  

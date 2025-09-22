@@ -1,0 +1,37 @@
+div.er,.red-colored{
+    color: red !important;
+}
+input{
+    display: block;
+    margin-bottom: 15px;
+}
+
+div.body-content{
+    margin-top: 30px;
+    margin-left: 15px;
+}
+div.table-container{
+    max-width: 700px ;
+    margin: 80px auto auto auto
+}
+tr{
+    text-align: center;
+}
+div.form-container-item{
+    margin-bottom:25px ;
+}
+div.input-container{
+    max-width: 400px;
+}
+.centered{
+    text-align: center;
+}
+.message-action{
+    font-size: 22px;
+}
+.big-logo{
+    font-size: 35px !important;
+}
+.mid-size{
+    font-size: 18px !important;
+}

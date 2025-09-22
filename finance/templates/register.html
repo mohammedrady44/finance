@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block title %}Register{% endblock %}
+
+{% block header %}{% endblock %}
+
+{% block body %}
+  <form action="/register" method="post">
+    <div class="form-container-item input-container">
+    <input type="text" autocomplete="off"  class="form-control"  name = "username" placeholder="username">
+    </div>
+    <div class="form-container-item input-container">
+    <input type="password" autocomplete="off"  class="form-control" name = "password" placeholder="password">
+    </div>
+    <div class="form-container-item input-container">
+    <input type="password" autocomplete="off"  class="form-control" name = "confirmation" placeholder="confirmation">
+    </div>
+    <div class="form-container-item">
+    <button class ="btn btn-primary">Register</button>
+    </div>
+    <div class = "er">{{value}}</div>
+  </form> 
+{% endblock %}    

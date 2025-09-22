@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block header %}{% endblock %}
+
+{% block body %}
+  <form action="/login" method="post">
+     <div class="form-container-item input-container">
+    <input type="text" class="form-control" autocomplete="off" name = "username" placeholder="username">
+    </div>
+    <div class="form-container-item input-container">
+    <input class="form-control" type="password" autocomplete="off" name = "password" placeholder="password">
+    </div>
+    <div class="form-container-item">
+    <button class ="btn btn-primary">Login</button>
+    </div>    
+    <div class="form-container-item">
+    <div class = "er">{{value}}</div>
+    </div>    
+    <h5>Don't have an account
+      <a href="/register">Make one</a>
+    </h5>      
+  </form> 
+{% endblock %}    

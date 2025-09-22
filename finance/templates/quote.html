@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block title %}Quote{% endblock %}
+
+{% block body %}
+<form action="/quote" method="post">
+    <div class="form-container-item input-container">
+        <input class="form-control" type="text" autocomplete="off" name = "symbol" placeholder="stockname">
+        {% if error_status %}
+            <div class = "er">{{value}}</div>
+        {% endif %}
+    </div>
+    
+    <div class="form-container-item">
+        <button class ="btn btn-primary">Quote</button>
+    </div>
+    {% if not error_status %}
+        <div>{{value}}</div>
+    {% endif %}
+
+</form>
+{% endblock %} 

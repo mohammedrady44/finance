@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block title %}Buy{% endblock %}
+
+{% block body %}
+    <form action="/addcash" method="post">
+        <div class="form-container-item input-container">
+        <input type="text" class="form-control" autocomplete="off" name = "amount" placeholder="amount">
+        {% if error %}
+            <div class = "er">{{error}}</div>  
+        {% endif %}
+        </div>
+        <div class="form-container-item"></div>
+        <button class ="btn btn-primary">Deposit</button>
+        </div>
+    </form> 
+{% endblock %}    

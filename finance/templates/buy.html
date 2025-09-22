@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block title %}Buy{% endblock %}
+
+{% block body %}
+
+    <form action="/buy" method="post">
+    <div class="form-container-item input-container">
+        <input type="text"  class="form-control" autocomplete="off" name = "symbol" placeholder="stockname">
+    </div>
+    <div class="form-container-item input-container">
+    <input type="text" class="form-control" autocomplete="off" name = "shares" placeholder="shares">
+    </div>
+    <div class="form-container-item">
+    <button class ="btn btn-primary">Buy</button>
+    </div>  
+    {% if value %}
+        <div class = "er">{{value}}</div> 
+    {% endif %}  
+    </form> 
+{% endblock %}
+
